@@ -14,14 +14,14 @@ from datetime import datetime
 def main():
     while True: #handle inputs
         try:
-            name, dob_yyyy, dob_mm, dob_dd, target_age, copy = input('Please enter NAME YYYY MM DD TARGETAGE NUM_COPY\n').split()
+            name, dob_yyyy, dob_mm, dob_dd, target_age, copy = input('Please enter NAME YYYY MM DD TARGETAGE NUM_COPY: ').split()
         except ValueError:
-            print('Please enter valid inputs')
+            print('Invalid inputs. ', end = '')
             continue
         try:#check input format
             birthday = datetime(int(dob_yyyy),int(dob_mm),int(dob_dd))
         except ValueError:
-            print('Please enter a valid date')
+            print('Invalid inputs. ', end = '')
             continue
         try: #handle Feburary 29
             target_date = datetime(int(dob_yyyy) + int(target_age), int(dob_mm), int(dob_dd))
