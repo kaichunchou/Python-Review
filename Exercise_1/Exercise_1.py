@@ -21,13 +21,12 @@ def main():
         try:#check input format
             birthday = datetime(int(dob_yyyy),int(dob_mm),int(dob_dd))
         except ValueError:
-            correctDate = False
             print('Please enter a valid date')
             continue
         try: #handle Feburary 29
             target_date = datetime(int(dob_yyyy) + int(target_age), int(dob_mm), int(dob_dd))
         except ValueError:
-            target_date = datetime(int(dob_yyyy) + int(target_age), int(dob_mm) + 1, 1)
+            target_date = datetime(int(dob_yyyy) + int(target_age), 3, 1)
         break
     
     if target_date < datetime.now():
