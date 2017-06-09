@@ -4,6 +4,8 @@ Exercise 17
 Use the BeautifulSoup and requests Python packages to print out a list of all the article titles on the New York Times homepage.
 '''
 from random import randint
+import requests
+from bs4 import BeautifulSoup
 
 def main():
     url = 'http://www.nytimes.com/'
